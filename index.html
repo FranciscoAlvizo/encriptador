@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="index.js">
+    <script src="script.js"></script>
     <link rel="shortcut icon" href="img/icono.png" type="image/x-icon">
     <title>Alura Challenge - Desafio 1</title>
 
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -19,25 +21,25 @@
 
     <main>
         <div class="texto">
-            <textarea name="textarea" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <textarea name="textarea" id="miTexto" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
 
-            
+            <p id="textofinal"></p>
         </div>
 
         <div class="letras">
             <img src="img/Vector.png" alt="">
             <p id="min"> Solo letras minúsculas y sin acentos</p>
         </div>
-            
+
         <div class="botones">
-            <input type="button" value="Encriptar"  class="boton1">
-            <input type="button" value="Desencriptar" class="boton2">
+            <button onclick="capturar()" class="boton1">Encriptar</button>
+            <button onclick="Desencriptar()" class="boton2">Desencriptar</button>
         </div>
-        
+
 
         <div class="rectangulo">
             <img src="img/Muñeco.png" alt="Imagen de un muñeco">
-            
+
             <div class="texto1">
                 <p class="text1">Ningún mensaje fue encontrado</p>
                 <p class="text2">Ingresa el texto que desees encriptar o desencriptar</p>
@@ -48,6 +50,7 @@
 
     </main>
 
-    
+
 </body>
+
 </html>

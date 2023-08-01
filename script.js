@@ -37,9 +37,14 @@ function capturar() {
     });
 
     var textoFinal = letrasNuevas.join("");
-
     document.getElementById("textofinal").innerHTML = textoFinal;
 
+    const doc = document.getElementById("contenido");
+    doc.removeChild(doc.firstElementChild);
+
+
+    const boton = document.getElementById("miBoton");
+    boton.style.display = "block";
 
 
 }
@@ -62,13 +67,36 @@ function Desencriptar() {
 
     document.getElementById("textofinal").innerHTML = textoFinal;
 
+    const doc = document.getElementById("contenido");
+    doc.removeChild(doc.firstElementChild);
+
+
+    const boton = document.getElementById("miBoton");
+    boton.style.display = "block";
+
 
 
 
 
 }
 
-function ColocarTextoEnCuadro() {
+function copiarTextoAlPortapapeles() {
+    // Obtener el contenido del párrafo
+    const parrafo = document.getElementById("textofinal");
+    const texto = parrafo.innerText;
 
+    // Crear un elemento de texto temporal para copiar al portapapeles
+    const textoTemporal = document.createElement("textarea");
+    textoTemporal.value = texto;
+    document.body.appendChild(textoTemporal);
 
+    // Seleccionar el texto temporal y copiarlo
+    textoTemporal.select();
+    document.execCommand("copy");
+
+    // Eliminar el elemento de texto temporal
+    document.body.removeChild(textoTemporal);
+
+    // Mostrar una notificación o feedback al usuario (opcional)
+    alert("Texto copiado al portapapeles: " + texto);
 }
